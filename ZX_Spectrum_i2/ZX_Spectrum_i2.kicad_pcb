@@ -34,13 +34,52 @@
 		(45 "User.4" user)
 	)
 	(setup
+		(stackup
+			(layer "F.SilkS"
+				(type "Top Silk Screen")
+			)
+			(layer "F.Paste"
+				(type "Top Solder Paste")
+			)
+			(layer "F.Mask"
+				(type "Top Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "F.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "dielectric 1"
+				(type "core")
+				(thickness 1.51)
+				(material "FR4")
+				(epsilon_r 4.5)
+				(loss_tangent 0.02)
+			)
+			(layer "B.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "B.Mask"
+				(type "Bottom Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "B.Paste"
+				(type "Bottom Solder Paste")
+			)
+			(layer "B.SilkS"
+				(type "Bottom Silk Screen")
+			)
+			(copper_finish "None")
+			(dielectric_constraints no)
+		)
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
 		(tenting front back)
 		(grid_origin 40.9 154.5)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_55555570)
-			(plot_on_all_layers_selection 0x00000000_00000000_00000000_02080021)
+			(plot_on_all_layers_selection 0x00000000_00000000_00000000_02020021)
 			(disableapertmacros no)
 			(usegerberextensions no)
 			(usegerberattributes yes)
@@ -75,7 +114,7 @@
 			(mirror no)
 			(drillshape 2)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "exports/")
 		)
 	)
 	(net 0 "")
@@ -45413,9 +45452,26 @@
 		(layer "Edge.Cuts")
 		(uuid "912e0e1f-14c4-4211-8461-d39f436b0211")
 	)
+	(gr_poly
+		(pts
+			(arc
+				(start 168.28 31.61)
+				(mid 169.115032 32.445032)
+				(end 169.950064 31.61)
+			)
+			(xy 169.95 24.01) (xy 254.8 24.01) (xy 254.8 154.51) (xy 40.9 154.51) (xy 40.9 24.01) (xy 168.28 24.01)
+		)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill yes)
+		(layer "User.4")
+		(uuid "460fb860-79ed-46fb-b9e1-b2e4b79d3f18")
+	)
 	(image
 		(at 147.863816 89.254606)
-		(layer "Dwgs.User")
+		(layer "Cmts.User")
 		(locked yes)
 		(data "/9j/4AAQSkZJRgABAQIArgCuAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIf"
 			"IiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7"
@@ -64169,7 +64225,7 @@
 	)
 	(gr_text "ZX Spectrum Issue two mod"
 		(at 186.4 190.6 0)
-		(layer "Cmts.User")
+		(layer "Dwgs.User")
 		(uuid "7ac767ed-f0ed-45f4-8cab-0ca2c1b6152b")
 		(effects
 			(font
@@ -64181,7 +64237,7 @@
 	)
 	(gr_text "Copyright 2026 V. Messina"
 		(at 219.6 197.3 0)
-		(layer "Cmts.User")
+		(layer "Dwgs.User")
 		(uuid "b7832f3a-227a-4919-bf87-0ed08cc3662b")
 		(effects
 			(font
@@ -64191,9 +64247,9 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "2026/03/30"
+	(gr_text "2026/03/31"
 		(at 206.9 194.2 0)
-		(layer "Cmts.User")
+		(layer "Dwgs.User")
 		(uuid "d66254c0-b260-4296-be64-10be4e550a5f")
 		(effects
 			(font
@@ -64205,7 +64261,7 @@
 	)
 	(gr_text "0.00.01"
 		(at 268.4 194.3 0)
-		(layer "Cmts.User")
+		(layer "Dwgs.User")
 		(uuid "e7d6478c-6577-472e-9e11-201c80c05bcb")
 		(effects
 			(font
